@@ -4,18 +4,24 @@ using BLL;
 
 namespace PL
 {
-    public static class PlClass
+    public static class ConsoleAppClass
     {
         /* here goes everything that's 
         * connected to the interaction
         * with the user, e.g. through a Console
         */
-        public static void Run()
+        public static void Run(string[] args)
         {
-            Console.WriteLine("This is an example of PL");
-            Console.WriteLine("Please, write the name of the file: ");
-            string path = (string)Console.In.ReadLine();
-            string s2 = "fox";
+            Console.WriteLine("This is an example of Console App");
+            string path;
+            if (args.Length == 0)
+            {
+                Console.WriteLine("Please, write the name/path of/to the file: ");
+                path = (string)Console.In.ReadLine();
+            } else {
+                path = args[0];
+            }
+            string s2 = "fox"; //a word to find
             BllClass bl = new BllClass(path);
             bool b = bl.Contains(s2);
             Console.WriteLine("'{0}' is in the file '{1}': {2}",

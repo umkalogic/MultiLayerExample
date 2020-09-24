@@ -7,7 +7,7 @@ namespace MultiLayerExample
     {
         static void Main(string[] args)
         {
-            PlClass.Run();
+            ConsoleAppClass.Run(args);
         }
     }
 }
