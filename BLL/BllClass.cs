@@ -5,7 +5,7 @@ namespace BLL
     //contains entities as classes
     public class BllClass
     {
-        private DAL.DalClass dal = new DAL.DalClass();
+        private DalClass dal = new DalClass();
         private string data; //it could be a class type
 
         public BllClass(string path)
